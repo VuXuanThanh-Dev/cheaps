@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: teal;
+}
+
+label {
+    position: relative;
+    width: 80px;
+    display: inline-block;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    height: 30px;
+    cursor: pointer;
+}
+label.active {
+    
+}
+
+
+
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+input:checked + label {
+    background-color: blueviolet;
+}
+
+
+input:checked + label > .ball {
+    transform: translateX(148%);
+}
+
+.ball {
+    position: absolute;
+    left:0;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    bottom: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
